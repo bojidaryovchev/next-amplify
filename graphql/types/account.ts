@@ -25,6 +25,7 @@ export const AccountsQuery = extendType({
   definition(t) {
     t.nonNull.list.field('accounts', {
       type: 'Account',
+      // @ts-ignore
       authorize: (root, args, ctx) => ctx.authGuard(),
       resolve(_parent, _args, ctx) {
         return ctx.prisma.account.findMany();
