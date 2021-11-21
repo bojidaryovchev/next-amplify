@@ -29,4 +29,4 @@ for each environment variable that we have in order for our environment variable
 
 7. we have added GraphQL Nexus following [this tutorial](https://www.prisma.io/blog/fullstack-nextjs-graphql-prisma-2-fwpc6ds155)
 
-There is also a [YouTube video recording](https://www.youtube.com/watch?v=YvoyHgZWSFY) of the setup from scratch minus the GraphQL / GraphQL Nexus part
+There is also a [YouTube video recording](https://www.youtube.com/watch?v=YvoyHgZWSFY) of the setup from scratch minus the GraphQL / GraphQL Nexus part. If you are going to watch the video, make sure to read the description as well.
