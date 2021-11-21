@@ -1,4 +1,4 @@
-import { makeSchema } from 'nexus';
+import { fieldAuthorizePlugin, makeSchema } from 'nexus';
 import { join } from 'path';
 import * as types from './types';
 
@@ -12,4 +12,5 @@ export const schema = makeSchema({
     export: 'Context',
     module: join(process.cwd(), 'graphql', 'context.ts'),
   },
+  plugins: [fieldAuthorizePlugin()],
 });

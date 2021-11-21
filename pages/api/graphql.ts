@@ -4,7 +4,6 @@ import { ApolloServer } from 'apollo-server-micro';
 import { RequestHandler } from 'micro';
 import Cors from 'micro-cors';
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getSession } from 'next-auth/react';
 import { createContext } from '../../graphql/context';
 import { schema } from '../../graphql/schema';
 
@@ -25,17 +24,6 @@ export default cors(async function handler(req, res) {
   if (req.method === 'OPTIONS') {
     res.end();
     return false;
-  }
-
-  if (process.env.NODE_ENV === 'production') {
-    // get the current NextAuth session
-    const session = await getSession({ req });
-
-    // return 401 if the session doesn't exist
-    if (!session) {
-      res.status(401).end();
-      return false;
-    }
   }
 
   await startServer;

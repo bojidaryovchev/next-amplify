@@ -21,4 +21,12 @@ type Account {
 
 type Query {
   accounts: [Account]!
+  users: [User]!
+}
+
+type User {
+  email: String
+  id: String!
+  image: String
+  name: String
 }
