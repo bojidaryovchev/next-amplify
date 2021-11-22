@@ -16,8 +16,8 @@
 In order to scaffold this project we have gone over the following steps:
 
 1. we have created a Next.js application using ```npx create-next-app@latest --ts```
-2. we have initialized AWS Amplify using ```npx amplify init``` and following the [AWS Amplify Next.js tutorial for SSG apps](https://docs.amplify.aws/guides/hosting/nextjs/q/platform/js/#adding-amplify-hosting-1)
-3. we initialized Prisma using ```npx prisma init``` and we have added ```binaryTargets = ["native", "rhel-openssl-1.0.x"]``` under ```provider = "prisma-client-js"```
+2. we have initialized AWS Amplify using ```npx amplify init``` and we have followed the [AWS Amplify Next.js tutorial for SSG apps](https://docs.amplify.aws/guides/hosting/nextjs/q/platform/js/#adding-amplify-hosting-1)
+3. we have initialized Prisma using ```npx prisma init``` and we have added ```binaryTargets = ["native", "rhel-openssl-1.0.x"]``` under ```provider = "prisma-client-js"```
 4. we have initialized NextAuth following the [NextAuth Prisma tutorial](https://next-auth.js.org/adapters/prisma) with the corresponding environment variables in the ```.env``` file (notice that this file is not present in our repository as it is intended to contain sensitive secrets)
 5. we have added our environment variables in our **AWS account > AWS Amplify > our app > Environment variables**
 6. we have modified our ```amplify.yml``` file found in our **AWS account > AWS Amplify > our app > Build settings** by adding ```- echo "VARIABLE=$VARIABLE" >> .env``` under
